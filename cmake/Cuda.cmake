@@ -179,7 +179,7 @@ function(detect_cuDNN)
   set(CUDNN_ROOT "" CACHE PATH "CUDNN root folder")
 
   find_path(CUDNN_INCLUDE cudnn.h
-            HINTS ${CUDNN_ROOT} $ENV{CUDNN_ROOT} ${CUDA_TOOLKIT_INCLUDE}
+            HINTS ${CUDNN_ROOT}/include $ENV{CUDNN_ROOT}/include ${CUDA_TOOLKIT_INCLUDE}
             DOC "Path to cuDNN include directory." )
 
   # dynamic libs have different suffix in mac and linux
